@@ -11,4 +11,6 @@ rm *.PNG
 
 find . -type f  ! -name "*.*"  -delete
 
+rename "s/jpeg/jpg/" *.jpeg
+
 exiv2 -r'%Y_%m_%d__%H_%M_%S' -F *.jpg
