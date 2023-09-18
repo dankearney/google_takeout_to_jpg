@@ -5,9 +5,10 @@ exiftool -r -d %s -tagsfromfile "%d/%F.json" "-GPSAltitude<GeoDataAltitude" "-GP
 mogrify -format jpg *.PNG
 mogrify -format jpg *.HEIC
 
-rm *.JSON
+rm *.json
 rm *.HEIC
 rm *.PNG
+
 find . -type f  ! -name "*.*"  -delete
 
 exiv2 -r'%Y_%m_%d__%H_%M_%S' -F *.jpg
